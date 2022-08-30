@@ -3,14 +3,18 @@
 const lista = document.getElementById('listado');
 
 fetch('https://jsonplaceholder.typicode.com/posts')
-    .then( (resp) => resp.json() )
-    .then( (data) => {
-       
+    .then((resp) => resp.json())
+    .then((data) => {
+
         data.forEach((post) => {
-            const li = document.createElement('li')
+            const li = document.createElement('div')
             li.innerHTML = `
-                <h4>${post.title}</h4>
-                <p>${post.body}</p>
+            <div class="card col" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">${post.title}</h5>
+                <p class="card-text">${post.body}</p>
+              </div>
+            </div>
             `
             lista.append(li)
         })
@@ -137,10 +141,10 @@ function mostrarPrecioFinal() {
 
     let precioTotal = document.getElementById('precioFinal');
 
-    let precioPersonas = 1000*personas.length;
+    let precioPersonas = 1000 * personas.length;
     console.log(precioPersonas);
-    
-    let precioFinal = precioPersonas*tiempo;
+
+    let precioFinal = precioPersonas * tiempo;
     console.log(precioFinal);
 
 
@@ -174,15 +178,15 @@ calcularBtn.onclick = (event) => {
 
 }
 
-function calculo(cantidad,precio,inputtext,totaltext){
-	
-	// Calculo del subtotal
-	subtotal = precio*cantidad;
-	inputtext.value=subtotal;
-	
-        //Calculo del total
-	total = eval(totaltext.value);
-	totaltext.value = total + subtotal;
+function calculo(cantidad, precio, inputtext, totaltext) {
+
+    // Calculo del subtotal
+    subtotal = precio * cantidad;
+    inputtext.value = subtotal;
+
+    //Calculo del total
+    total = eval(totaltext.value);
+    totaltext.value = total + subtotal;
 }
 
 function mostrarAlert() {
@@ -193,6 +197,17 @@ function mostrarAlert() {
         icon: 'success',
         confirmButtonText: 'Continuar con el pago'
     })
-    
+
+}
+
+
+function mostrarAlertInfo() {
+
+    Swal.fire({
+        icon: 'info',
+        title: 'Contacto',
+        text: 'Mail: info@casadevera.com | Telefono: 4321-4321',
+        footer: '<a href="reservas.html">Reservar ahora</a>'
+    })
 }
 

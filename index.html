@@ -9,102 +9,102 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <title>La casa de Vera - Reservas</title>
+    <title>La casa de Vera</title>
 </head>
 
 <body>
-
-    <header class="header">
-        <img src="images/logo.png" alt="logo" class="logo">
-        <h3><a href="index.html">La casa de Vera</a></h3>
-        <a href="comentarios.html">Comentarios</a>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: #055568;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top"><a class="nav-link active fs-5" aria-current="page" href="index.html">La Casa de Vera</a>
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservas.html">Reservas</a>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="comentarios.html">Comentarios</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
 
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>¿Quiénes viajan?</h3>
-                <form id="formularioPersonas">
-                    <div class="mb-3">
-                        <label class="form-label">Nombre</label>
-                        <input id="nombre" class="form-control" type="text" placeholder="Ingresa el nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Apellido</label>
-                        <input id="apellido" class="form-control" type="text" placeholder="Ingresa el apellido">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Edad</label>
-                        <input id="edad" class="form-control" type="text" placeholder="Ingresa la edad">
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-light">Registrar</button>
-                    </div>
-                    <div class="error1">
-                        <h4>Tienes que completar todos los campos</h4>
-                    </div>
-                </form>
-            </div>
-
-
-            <div class="col-md-6">
-                <table id="tablaPersonas" class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <td>Nombre</td>
-                            <td>Apellido</td>
-                            <td>Edad</td>
-                        </tr>
-                        </th>
-
-                    <tbody class="tabla">
-
-                    </tbody>
-
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-3">
-        <div class="col-md-6">
-
-            <h3>¿Cuantos dias van a quedarse?</h3>
-            <form id="formularioTiempo">
-                <div class="mb-3">
-                    <label class="form-label"></label>
-                    <input id="dias" class="form-control" type="text" placeholder="Ingresa la cantidad de dias que van a hospedarse">
-                </div>
-                <div class="d-grid gap-2">
-                    <button id="calcularBtn" type="submit" class="btn btn-light">Calcular</button>
-                </div>
-                <div class="error2">
-                    <h4>Tienes que completar el campo</h4>
-                </div>
-                <div class="errorTiempoMax">
-                    <h4>La estadia maxima es de 30 dias</h4>
-                </div>
-            </form>
-        </div>
-
-
-        <div class="col-md-6">
-            <h4>Precio final:</h4>
-            <div id="precioFinal">
-
-            </div>
-            <div class="d-grid gap-2">
-                <button id="alert" onclick="mostrarAlert()" class="btn btn-light"> Confirmar reserva </button>
-
-            </div>
-
-            
-
-        </div>
-    </div>
-
     
+    <main>
+        <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/casa01.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/casa02.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/casa03.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container text-left info">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-10">
+                    <h1>Sobre nosotros</h1>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-10">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, laborum, quisquam eaque sint sit
+                        dicta facere sunt aliquam quibusdam consectetur ipsa magnam itaque est quas, asperiores incidunt
+                        iusto accusamus repellendus.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore atque voluptates quidem veritatis
+                        id error expedita amet nesciunt quam eius, dicta reiciendis? Id fugiat delectus cumque laborum
+                        nobis, aliquam recusandae! Eveniet tempore omnis odio soluta doloremque quasi ea perspiciatis
+                        aspernatur quas laborum numquam itaque saepe officiis eos aliquam dignissimos, magni dolor
+                        architecto voluptates et adipisci. Accusantium voluptatem, ea dicta laborum voluptas, eligendi
+                        quas, corporis provident fugiat nisi saepe! Ullam, quo!</p>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-10"><button id="alert" onclick="mostrarAlertInfo()" class="btn btn-light">Más
+                        información</button></div>
+                <div class="col"></div>
+            </div>
+
+        </div>
+    </main>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

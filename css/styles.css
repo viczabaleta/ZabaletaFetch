@@ -1,10 +1,25 @@
-.header {
-    background-color: #055568;
-    display: flex;
-    align-items: center;
-    justify-content: baseline;
+.navbar {
+    
     height: 80px;
     color:white
+} 
+
+.bg-light {
+    color: #055568;
+}
+
+.header, .container {
+    width: 100vw;
+}
+
+.header_section {
+    text-decoration: none;
+    color: white;
+}
+
+.selected {
+    color:#D05663;
+    font-weight: bold;
 }
 
 .logo {
@@ -12,9 +27,16 @@
 
 }
 
-.header h3 {
-    padding-left: 30px;
-    padding-right: 10px;
+.header_titulo {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.info {
+    color: #fff;
+    background-color: #055568;
+    padding: 60px;
 }
 
 .btn-light {
